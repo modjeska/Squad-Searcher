@@ -1,0 +1,21 @@
+Website name: Squad Searcher
+
+Idea: website to find players to play games with
+
+Elevator Pitch: 
+While gaming can be fun, playing by yourself can be boring from time to time. With Squad Searcher, 
+players can find people to play with for a variety of different games.
+Players can find team mates for different platforms and can search for 
+people interested in ranked play or casual play. 
+
+Supported games:
+League of Legends
+Valorant
+Apex Legends
+Fortnite
+Overwatch
+
+Platforms:
+XBOX 
+PLAYSTATION
+PC
