@@ -39,11 +39,11 @@ const squadSchema = new Schema({
         required: true,
     },
     users: [{
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'User',
     }],
 });
 
 const Squad = model('Squad', squadSchema);
 
-module.epxorts = Squad;
+module.exports = Squad;
