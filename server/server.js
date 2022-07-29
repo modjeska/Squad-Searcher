@@ -4,6 +4,7 @@ const path = require('path');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+const { authContext } = require('./util/authUtils');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,6 +20,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 	const apolloServer = new ApolloServer({
 		typeDefs,
 		resolvers,
+		context: authContext,
 	});
 	await apolloServer.start();
 	apolloServer.applyMiddleware({ app }); // default path: /graphql
