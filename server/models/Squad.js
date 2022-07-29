@@ -39,7 +39,7 @@ const squadSchema = new Schema({
         required: true,
     },
     users: [{
-        type: String,
+        type: Schema.Types.ObjectId,
         ref: 'User',
     }],
 });
