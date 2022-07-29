@@ -31,15 +31,23 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   };
   
   const handleOpenLogin = () => {
-    setPageState({...pageState, login: true, squads: false, filters: false, contact: false,})
+    setPageState({...pageState, assemble: false, create: false, login: true, squads: false, filters: false, contact: false,})
   }
 
   const handleOpenSquads = () => {
-    setPageState({...pageState, login: false, squads: true, filters: true, contact: false,})
+    setPageState({...pageState, assemble: false, create: false, login: false, squads: true, filters: true, contact: false,})
   }
   
   const handleOpenContact = () => {
-    setPageState({...pageState, login: false, squads: false, filters: false, contact: true,})
+    setPageState({...pageState, assemble: false, create: false, login: false, squads: false, filters: false, contact: true,})
+  }
+
+  const handleOpenCreate = () => {
+    setPageState({...pageState, assemble: false, create: true, login: false, squads: false, filters: false, contact: false,})
+  }
+
+  const handleOpenAssemble = () => {
+    setPageState({...pageState, assemble: true, create: false, login: false, squads: false, filters: false, contact: false,})
   }
 
   return (
@@ -95,11 +103,17 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 <MenuItem onClick={handleOpenLogin}>
                   <Typography textAlign="center">LOGIN</Typography>
                 </MenuItem>
+                <MenuItem onClick={handleOpenCreate}>
+                  <Typography textAlign="center">SIGN UP</Typography>
+                </MenuItem>
                 <MenuItem onClick={handleOpenSquads}>
                   <Typography textAlign="center">FIND SQUAD</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleOpenContact}>
                   <Typography textAlign="center">JOINED SQUADS</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleOpenAssemble}>
+                  <Typography textAlign="center">CREATE SQUAD</Typography>
                 </MenuItem>
             </Menu>
           </Box>
@@ -133,6 +147,13 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               </Button>
               <Button
 
+                onClick={handleOpenCreate}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                SIGN UP
+              </Button>
+              <Button
+
                 onClick={handleOpenSquads}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
@@ -144,6 +165,13 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 JOINED SQUADS
+              </Button>
+              <Button
+
+                onClick={handleOpenAssemble}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                CREATE SQUAD
               </Button>
 
           </Box>
