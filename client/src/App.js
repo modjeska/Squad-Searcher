@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Create from './components/Create'
 import Assemble from './components/Assemble'
+import Contact from './components/Contact'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -68,6 +69,10 @@ function App() {
               <Route 
                 path="/joined-squads" 
                 element={<Joined />} 
+              />
+              <Route 
+                path="/contact" 
+                element={<Contact />} 
               />
               {/* <Route 
                 path="/profiles/:profileId" 

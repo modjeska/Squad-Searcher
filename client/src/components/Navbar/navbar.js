@@ -78,6 +78,9 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 <MenuItem>
                 <Link className="menu-link" to="/create-squad">Create Squad</Link>
                 </MenuItem>
+                <MenuItem>
+                <Link className="menu-link" to="/contact">Contact Us</Link>
+                </MenuItem>
             </Menu>
           </Box>
           <SentimentSatisfiedAltIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -114,6 +117,9 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
               </Link>
               <Link className="link" to="/create-squad">
                 Create Squad
+              </Link>
+              <Link className="link" to="/contact">
+                Contact Us
               </Link>
           </Box>
 
