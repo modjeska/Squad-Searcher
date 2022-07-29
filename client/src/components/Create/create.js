@@ -37,14 +37,21 @@ const create = () => {
         type="username"
         placeholder="username"
         // pass down to FormLabel as children
-        label="Username"
+        label="Create Username"
     />
     <TextField
         id="password"
         name="password"
         type="password"
         placeholder="password"
-        label="Password"
+        label="Create Password"
+      />
+      <TextField
+        id="password"
+        name="password"
+        type="password"
+        placeholder="password"
+        label="Confirm Password"
       />
      <Button
       className="but"
