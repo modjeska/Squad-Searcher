@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -29,48 +29,11 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
-  const handleOpenLogin = () => {
-    setPageState({...pageState, assemble: false, create: false, login: true, squads: false, filters: false, contact: false,})
-  }
-
-  const handleOpenSquads = () => {
-    setPageState({...pageState, assemble: false, create: false, login: false, squads: true, filters: true, contact: false,})
-  }
-  
-  const handleOpenContact = () => {
-    setPageState({...pageState, assemble: false, create: false, login: false, squads: false, filters: false, contact: true,})
-  }
-
-  const handleOpenCreate = () => {
-    setPageState({...pageState, assemble: false, create: true, login: false, squads: false, filters: false, contact: false,})
-  }
-
-  const handleOpenAssemble = () => {
-    setPageState({...pageState, assemble: true, create: false, login: false, squads: false, filters: false, contact: false,})
-  }
 
   return (
     <AppBar className="navbar" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-           >
-            
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -100,20 +63,20 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <MenuItem onClick={handleOpenLogin}>
-                  <Typography textAlign="center">LOGIN</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/sign-in">Login</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenCreate}>
-                  <Typography textAlign="center">SIGN UP</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/sign-up">Sign Up</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenSquads}>
-                  <Typography textAlign="center">FIND SQUAD</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/">Find Squad</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenContact}>
-                  <Typography textAlign="center">JOINED SQUADS</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/joined-squads">Joined Squads</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenAssemble}>
-                  <Typography textAlign="center">CREATE SQUAD</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/create-squad">Create Squad</Link>
                 </MenuItem>
             </Menu>
           </Box>
@@ -136,44 +99,22 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
           >
             
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-           
-              <Button
-
-                onClick={handleOpenLogin}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                LOGIN
-              </Button>
-              <Button
-
-                onClick={handleOpenCreate}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                SIGN UP
-              </Button>
-              <Button
-
-                onClick={handleOpenSquads}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                FIND SQUAD
-              </Button>
-              <Button
-
-                onClick={handleOpenContact}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                JOINED SQUADS
-              </Button>
-              <Button
-
-                onClick={handleOpenAssemble}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                CREATE SQUAD
-              </Button>
-
+          <Box className="box" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+              <Link className="link" to="/sign-in">
+                Login
+              </Link>
+              <Link className="link" to="/sign-up">
+                Sign Up
+              </Link>
+              <Link className="link" to="/">
+                Find Squad
+              </Link>
+              <Link className="link" to="/joined-squads">
+                Joined Squads
+              </Link>
+              <Link className="link" to="/create-squad">
+                Create Squad
+              </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

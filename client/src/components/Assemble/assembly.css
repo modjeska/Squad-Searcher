@@ -1,0 +1,45 @@
+.createSquadArea {
+    border-radius: 15px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(117, 40, 176);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.boxTitle {
+    color: white;
+}
+
+.option {
+    border-radius: 10px;
+    margin: 5px 0px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#gameButton {
+    color: white !important;
+    border: 1px solid rgb(117, 40, 176);
+    background-color: rgb(117, 40, 176);
+}
+
+#createButton {
+    margin: 10px 0px;
+    color: rgb(117, 40, 176) !important;
+    border: 1px solid white;
+    background-color: white;
+}

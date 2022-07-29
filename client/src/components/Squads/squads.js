@@ -1,6 +1,9 @@
 import React from 'react'
 import Grid from '@mui/material/Grid';
 import Card from '../Cards'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import './filters.css'
 
 const valorant = 'https://i.imgur.com/R7y3MEP.png'
 const lol = 'https://i.imgur.com/ICsy5Dc.png'
@@ -52,7 +55,21 @@ let projects = [{
 
   return (
     <>
-    <Grid container justifyContent="center" className="">
+    <Grid container justifyContent="center">
+      <h1>FILTERS</h1>
+    </Grid>
+    <Box>
+      <Grid className="filters" direction="column" justifyContent="center" container padding={2} spacing={2} alignItems="center">
+          <Grid className="main-navbar" justifyContent="center" direction="row" container xs={12} md={3}>
+               <Button id="platformFilter" textAlign="center" sx={{my: 2, color: 'white', display: 'block' }}>PLATFORM</Button>
+               <Button id="gameFilter" textAlign="center" sx={{my: 2, color: 'white', display: 'block' }}>GAME</Button>
+               <Button id="rankedFilter" textAlign="center" sx={{my: 2, color: 'white', display: 'block' }}>RANKED</Button>
+               <Button id="casualFilter" textAlign="center" sx={{my: 2, color: 'white', display: 'block' }}>CASUAL</Button>
+          </Grid>
+          <Grid item md={1}></Grid>
+      </Grid>
+    </Box>
+    <Grid container justifyContent="center">
       <h1>AVAILABLE SQUADS</h1>
     </Grid>
     <Grid container spacing={6} padding={2} justifyContent="center">

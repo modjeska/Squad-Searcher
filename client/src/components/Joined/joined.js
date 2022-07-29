@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './contact.css'
 
-const Contact = () => {
+const Joined = () => {
 
     const [formState, setFormState] = useState({
         name: '',
@@ -111,4 +111,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Joined
