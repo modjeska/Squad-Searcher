@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -29,40 +29,11 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
-  const handleOpenLogin = () => {
-    setPageState({...pageState, login: true, squads: false, filters: false, contact: false,})
-  }
-
-  const handleOpenSquads = () => {
-    setPageState({...pageState, login: false, squads: true, filters: true, contact: false,})
-  }
-  
-  const handleOpenContact = () => {
-    setPageState({...pageState, login: false, squads: false, filters: false, contact: true,})
-  }
 
   return (
     <AppBar className="navbar" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-           >
-            
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -92,14 +63,23 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <MenuItem onClick={handleOpenLogin}>
-                  <Typography textAlign="center">LOGIN</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/sign-in">Login</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenSquads}>
-                  <Typography textAlign="center">FIND SQUAD</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/sign-up">Sign Up</Link>
                 </MenuItem>
-                <MenuItem onClick={handleOpenContact}>
-                  <Typography textAlign="center">JOINED SQUADS</Typography>
+                <MenuItem>
+                <Link className="menu-link" to="/">Find Squad</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link className="menu-link" to="/joined-squads">Joined Squads</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link className="menu-link" to="/create-squad">Create Squad</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link className="menu-link" to="/contact">Contact Us</Link>
                 </MenuItem>
             </Menu>
           </Box>
@@ -122,30 +102,25 @@ const ResponsiveAppBar = ({pageState, setPageState}) => {
           >
             
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-           
-              <Button
-
-                onClick={handleOpenLogin}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                LOGIN
-              </Button>
-              <Button
-
-                onClick={handleOpenSquads}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                FIND SQUAD
-              </Button>
-              <Button
-
-                onClick={handleOpenContact}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                JOINED SQUADS
-              </Button>
-
+          <Box className="box" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+              <Link className="link" to="/sign-in">
+                Login
+              </Link>
+              <Link className="link" to="/sign-up">
+                Sign Up
+              </Link>
+              <Link className="link" to="/">
+                Find Squad
+              </Link>
+              <Link className="link" to="/joined-squads">
+                Joined Squads
+              </Link>
+              <Link className="link" to="/create-squad">
+                Create Squad
+              </Link>
+              <Link className="link" to="/contact">
+                Contact Us
+              </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

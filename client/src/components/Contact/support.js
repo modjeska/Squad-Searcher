@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import './contact.css'
+import './support.css'
 
 const Contact = () => {
 
@@ -55,7 +55,7 @@ const Contact = () => {
     <>
     <Grid container justifyContent="center">
         <Grid item>
-            <h1>Contact</h1>
+            <h1>Support</h1>
         </Grid>
     </Grid>
     <Grid className="error" container justifyContent="center">
@@ -104,7 +104,7 @@ const Contact = () => {
     </Grid>
     <Grid container justifyContent="center">
         <Grid item>
-            <Button>Submit</Button>
+            <Button id="submitButton">Submit</Button>
         </Grid>
     </Grid>
     </>

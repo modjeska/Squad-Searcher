@@ -1,0 +1,10 @@
+.error {
+    color: red !important;
+}
+
+#submitButton {
+    margin: 10px 0px;
+    color: rgb(117, 40, 176) !important;
+    border: 1px solid white;
+    background-color: white;
+}
