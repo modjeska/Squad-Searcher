@@ -1,1 +1,1 @@
-export {default} from './squads'
+export {default} from './Squads'
