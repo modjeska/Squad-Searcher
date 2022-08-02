@@ -22,8 +22,8 @@
   - Connect with more people.
   
 ## [Deployment](#deployment)
-[GitHub Pages](https://modjeska.github.io/Squad-Searcher/)
-[Heroku](https://squad-searcher.herokuapp.com/)
+- [GitHub Pages](https://modjeska.github.io/Squad-Searcher/)
+- [Heroku](https://squad-searcher.herokuapp.com/)
 
 ## [Installation](#table-of-contents)
   <b>No installation needed.</b>
