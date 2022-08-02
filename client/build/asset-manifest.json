@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Squad-Searcher/static/css/main.81b5328a.css",
+    "main.js": "/Squad-Searcher/static/js/main.22062923.js",
+    "index.html": "/Squad-Searcher/index.html",
+    "main.81b5328a.css.map": "/Squad-Searcher/static/css/main.81b5328a.css.map",
+    "main.22062923.js.map": "/Squad-Searcher/static/js/main.22062923.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81b5328a.css",
+    "static/js/main.22062923.js"
+  ]
+}

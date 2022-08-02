@@ -2,6 +2,7 @@
   "name": "squad-searcher",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://modjeska.github.io/Squad-Searcher",
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@emotion/react": "^11.9.3",
